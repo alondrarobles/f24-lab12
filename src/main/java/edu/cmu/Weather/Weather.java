@@ -3,6 +3,7 @@ package edu.cmu.Weather;
 public class Weather {
     private WeatherService weatherService;
     private boolean inches;
+    private boolean millimeters;
 
     /**
      * Sets the length scale for rainfall.
@@ -10,7 +11,12 @@ public class Weather {
      * @param inches if true, sets the scale to inches; if false, sets the scale to millimeters.
      */
     public void setLengthScale(boolean inches) {
-        this.inches = inches;
+        if (inches)
+        {
+            this.inches = inches;
+        }
+
+        millimeters = true;
     }
 
     /**
